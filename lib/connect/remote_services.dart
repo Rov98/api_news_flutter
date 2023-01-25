@@ -1,9 +1,7 @@
-import 'dart:convert';
 import 'dart:developer';
 
 import 'package:api_news_flutter/model/Post.dart';
 import 'package:api_news_flutter/model/User.dart';
-import 'package:api_news_flutter/model/Web_domain.dart';
 import 'package:http/http.dart' as http;
 
 class Remote_services {
@@ -39,17 +37,5 @@ class Remote_services {
       log(e.toString());
       print(e.toString());
     }
-  }
-
-  Future<List<dynamic>> getWeb_domain() async {
-    var url = Uri.parse(
-        'http://universities.hipolabs.com/search?country=United+Kingdom');
-    var result = await http.get(url);
-
-    if (result.statusCode == 200) {
-        return json.decode(result.body);
-      } else {
-        throw Exception('Log failed');
-      }
   }
 }

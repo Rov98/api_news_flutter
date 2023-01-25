@@ -1,5 +1,5 @@
 name: api_news_flutter
-description: A new Flutter project.
+description: Flutter app with auth login and rest api connection.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -34,6 +34,8 @@ dependencies:
   # all depedencies below here
   cupertino_icons: ^1.0.2
   http: ^0.13.4
+  provider: ^6.0.5
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
